@@ -6,9 +6,9 @@ from sklearn.metrics import accuracy_score
 
 # Step 1: Load the dataset
 try:
-    df = pd.read_csv("IMDB Dataset.csv")  
+    df = pd.read_csv("IMDB_small.csv")  
 except FileNotFoundError:
-    print("Error: 'IMDB Dataset.csv' not found.")
+    print("Error: 'IMDB_small.csv' not found.")
     exit()
 
 # Step 2: Basic preprocessing
