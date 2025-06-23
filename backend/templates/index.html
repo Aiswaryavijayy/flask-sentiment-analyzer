@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        textarea {
+            width: 60%;
+            height: 100px;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 30px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .positive { color: green; }
+        .negative { color: red; }
+        .neutral  { color: gray; }
+    </style>
+</head>
+<body>
+    <h1>🎬 Movie Review Sentiment Analyzer</h1>
+    <form method="POST">
+        <textarea name="review" placeholder="Type your review here..." required></textarea><br>
+        <button type="submit">Analyze Sentiment</button>
+    </form>
+
+    {% if result %}
+    <div class="result {{ sentiment_class }}">{{ result }}</div>
+    {% endif %}
+</body>
+</html>
